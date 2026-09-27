@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page - Activity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="design.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.22.1/jquery.validate.min.js"></script>
+</head>
+<body>
+  <main>
+    <div class="glass-card">
+      <h2 class="login-title">Login</h2>
+      <form id="loginForm">
+        <div class="input-group user">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="input-group password">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="options">
+          <div>
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember me</label>
+          </div>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn-custom">Login</button>
+        <p>Don’t have an account? <a href="register.html">Register</a></p>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    $(document).ready(function() {
+      $.validator.addMethod("noNumbers", function(value) {
+        return !/\d/.test(value);
+      }, "Username cannot contain numbers");
+
+      $.validator.addMethod("notAllUpper", function(value) {
+        return value !== value.toUpperCase();
+      }, "Username cannot be all uppercase");
+
+      $("#loginForm").validate({
+        rules: {
+          username: {
+            required: true,
+            minlength: 3,
+            noNumbers: true,
+            notAllUpper: true
+          },
+          password: {
+            required: true,
+            minlength: 5
+          }
+        },
+        messages: {
+          username: {
+            required: "Please enter your username",
+            minlength: function(params, element) {
+              return "You entered " + element.value.length +
+                     " characters, minimum is " + params;
+            }
+          },
+          password: {
+            required: "Please enter your password",
+            minlength: function(params, element) {
+              return "You entered " + element.value.length +
+                     " characters, minimum is " + params;
+            }
+          }
+        },
+        onkeyup: function(element) { $(element).valid(); },
+        onfocusout: function(element) { $(element).valid(); },
+        submitHandler: function(form) {
+          const user = $("#username").val();
+          const pass = $("#password").val();
+          if (user === "admin" && pass === "12345") {
+            localStorage.setItem("loggedUser", user);
+            window.location.href = "landing.html";
+          } else {
+            alert("Invalid credentials");
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
