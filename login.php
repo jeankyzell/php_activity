@@ -59,13 +59,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       <form id="loginForm" method="POST" action="">
         <div class="input-group user">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>">
+         <label for="username">Username</label>
+         <input type="text" id="username" name="username"
+                placeholder="Enter your Username"
+                value="<?php echo htmlspecialchars($username); ?>">
         </div>
-        <div class="input-group password">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password">
-        </div>
+
+<div class="input-group password">
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password"
+         placeholder="Enter your Password">
+</div>
         <div class="options">
           <div>
             <input type="checkbox" id="remember" name="remember">

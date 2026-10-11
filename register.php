@@ -75,23 +75,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <form id="registerForm" method="POST" action="">
         <div class="input-group user">
           <label for="username">Username</label>
-          <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>">
+          <input type="text" id="username" name="username" placeholder="Enter your Username" value="<?php echo htmlspecialchars($username); ?>">
         </div>
         <div class="input-group email">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>">
+          <input type="email" id="email" name="email" placeholder="Enter your Email" value="<?php echo htmlspecialchars($email); ?>">
         </div>
         <div class="input-group phone">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
+          <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" value="<?php echo htmlspecialchars($phone); ?>">
         </div>
         <div class="input-group password">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password">
+          <input type="password" id="password" name="password" placeholder="Enter your Password">
         </div>
         <div class="input-group password">
           <label for="confirm">Confirm Password</label>
-          <input type="password" id="confirm" name="confirm">
+          <input type="password" id="confirm" name="confirm" placeholder="Confirm your Password">
         </div>
         <button type="submit" class="btn-custom">Register</button>
         <p>Already have an account? <a href="login.php">Login here</a></p>
