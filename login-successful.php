@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedUser'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +30,12 @@
   <main>
     <div class="glass-card">
       <h2>Login Successful!</h2>
-      <p>Welcome back, you are now logged in.</p>
+      <p>Welcome back, <strong><?php echo htmlspecialchars($_SESSION['loggedUser']); ?></strong>.</p>
       <div class="center-btn">
-        <a href="landing.html" class="btn-custom">Go to Landing Page</a>
+        <a href="index.php" class="btn-custom">Go to Landing Page</a>
+      </div>
+      <div class="center-btn">
+        <a href="logout.php" class="btn-custom">Logout</a>
       </div>
     </div>
   </main>

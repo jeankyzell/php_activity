@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="design.css">
   <style>
-    .glass-card {
-      text-align: center;
-    }
+    .glass-card { text-align: center; }
     .center-btn {
       display: flex;
       justify-content: center;
@@ -22,7 +20,7 @@
       <h2 class="register-title">Registration Successful</h2>
       <p>Your account has been created successfully.</p>
       <div class="center-btn">
-        <a href="login.html" class="btn-custom">Go to Login</a>
+        <a href="login.php" class="btn-custom">Go to Login</a>
       </div>
     </div>
   </main>

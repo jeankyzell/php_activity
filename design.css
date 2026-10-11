@@ -124,6 +124,21 @@ a:hover {
 .register-title {
   color: rgb(35, 60, 172);
 }
+.error-box {
+  background: #ffecec;
+  border: 1px solid #e60000;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.error-item {
+  color: #e60000 !important;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 4px 0;
+  text-align: left;
+}
 
 @media (max-width: 768px) {
   .glass-card {

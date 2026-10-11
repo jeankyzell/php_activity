@@ -1,0 +1,23 @@
+[
+    {
+        "username": "john",
+        "email": "john@mail.com",
+        "phone": "12345667890",
+        "password": "$2y$10$Ur1cI4HIQVF1CNNZjlx8juCdOXYDulpG4AZmib.ktSybM5Ld0W3Im",
+        "created": "2026-10-11 11:20:38"
+    },
+    {
+        "username": "Hello",
+        "email": "hello@mail.com",
+        "phone": "1234567890",
+        "password": "$2y$10$u53Mi.YCID5Uiio6P1Oxl.KhUStpZkCiOUDypM4gP7UCF9zmeuQBu",
+        "created": "2026-10-11 11:59:08"
+    },
+    {
+        "username": "jean",
+        "email": "jean@mail.com",
+        "phone": "1234567890",
+        "password": "$2y$10$nk96I455aqJi2Ub11e1VjeByqRDs6O0SwaMHdYLmNX1qq6l\/PgYcq",
+        "created": "2026-10-11 14:03:27"
+    }
+]
